@@ -90,12 +90,6 @@ WSGI_APPLICATION = 'project3.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'postgres://mail_db_user:AXnr3wIHVir0gem7sQK4tsCpAYF5qML5@dpg-ch6de8o2qv26p1fr7b2g-a.oregon-postgres.render.com/mail_db',
-#         'NAME': os.path.join(BASE_DIR, 'django.db.backends.postgresql'),
-#     }
-# }
 
 DATABASES = {
 
