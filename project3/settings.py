@@ -27,7 +27,7 @@ load_dotenv(BASE_DIR / '.env')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = '05$4$3aew(8ywondz$g!k4m779pbvn9)euj0zp7-ae*x@4pxr+'
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = '4c0a979295d79c6dd7461e42f16a4895'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -90,8 +90,19 @@ WSGI_APPLICATION = 'project3.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'postgres://mail_db_user:AXnr3wIHVir0gem7sQK4tsCpAYF5qML5@dpg-ch6de8o2qv26p1fr7b2g-a.oregon-postgres.render.com/mail_db',
+#         'NAME': os.path.join(BASE_DIR, 'django.db.backends.postgresql'),
+#     }
+# }
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600),
+
+    'default': dj_database_url.config(
+        default='postgres://mail_db_user:AXnr3wIHVir0gem7sQK4tsCpAYF5qML5@dpg-ch6de8o2qv26p1fr7b2g-a.oregon-postgres.render.com/mail_db',
+        conn_max_age=600
+    )
 }
 
 AUTH_USER_MODEL = 'mail.User'
