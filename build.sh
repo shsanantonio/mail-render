@@ -4,7 +4,7 @@ set -o errexit  # exit on error
 
 pip3 install -r requirements.txt
 
-python3 manage.py collectstatic --no-input
-python3 manage.py migrate
+python manage.py collectstatic --no-input
+python manage.py migrate
 
-python3 manage.py createsuperuser
+python manage.py createsuperuser
